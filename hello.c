@@ -25,7 +25,7 @@ int init_server()
     hints.ai_socktype = SOCK_STREAM; // TCP
     hints.ai_flags = AI_PASSIVE;     // PASSIVE mode
 
-    getaddrinfo(0, PORT, &hints, &bind_addr); //get local address from system.
+    getaddrinfo(0, PORT, &hints, &bind_addr); //get local address from system to use in bind().
 
     //init socket
     int socketfd = socket(bind_addr->ai_family, bind_addr->ai_socktype, bind_addr->ai_protocol);
