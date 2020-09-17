@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
     }
 
 
-    send_response(server, "RCPT TO:<00.xog.00@gmail.com>\r\n");
+    send_response(server, "RCPT TO:<testing@gmail.com>\r\n");
 
     if (!wait_for_response(server, "250")){
         printf("unexpected response\n");
